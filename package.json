@@ -1,6 +1,6 @@
 {
   "name": "react-bootstrap-datetimepicker-noicon",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "A fork of react-bootstrap-datetimepicker with no datepicker icon",
   "repository": {
     "type": "git",
@@ -9,8 +9,8 @@
   "main": "./lib/DateTimeField.js",
   "scripts": {
     "build-npm": "babel --stage 0 ./src -d ./lib --ignore __tests__/*",
-    "build": "NODE_ENV=production webpack --output-file react-bootstrap-datetimepicker.js",
-    "build-min": "NODE_ENV=production COMPRESS=1 webpack --output-file react-bootstrap-datetimepicker.min.js",
+    "build": "NODE_ENV=production webpack --output-file react-bootstrap-datetimepicker-noicon.js",
+    "build-min": "NODE_ENV=production COMPRESS=1 webpack --output-file react-bootstrap-datetimepicker-noicon.min.js",
     "examples": "webpack-dev-server --config ./examples/webpack.config.js",
     "test": "jest",
     "lint": "eslint ."
