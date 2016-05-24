@@ -1,19 +1,20 @@
-react-bootstrap-datetimepicker
+react-bootstrap-datetimepicker-noicon
 ===============================
 
-This project is a port of https://github.com/Eonasdan/bootstrap-datetimepicker for React.js
+This project is a fork of https://github.com/quri/react-bootstrap-datetimepicker with a slightly different appearance. The datepicker icon has been removed from the input field and the entire field is now clickable to bring up the datepicker. The location of the datepicker has also been lowered slightly to prevent obstruction of the field while typing.
+
 
 Usage
 ===============================
 
 Installation :
 ```
-npm install react-bootstrap-datetimepicker
+npm install react-bootstrap-datetimepicker-noicon
 ```
 
 Then
 ```javascript
-var DateTimeField = require('react-bootstrap-datetimepicker');
+var DateTimeField = require('react-bootstrap-datetimepicker-noicon');
 
 ...
 
@@ -44,18 +45,6 @@ DateTimeField
 | **maxDate** | moment | undefined | The latest date allowed for entry in the calendar view. |
 | **mode** | string | undefined | Allows to selectively display only the time picker ('time') or the date picker ('date') |
 | **defaultText** | string | {dateTime} | Sets the initial value. Could be an empty string, or helper text. |
-
-Update Warning
-===============================
-Starting from 0.0.6, the 3 github repositories `react-bootstrap-datetimepicker`, `react-bootstrap-datetimepicker-npm` and `react-bootstrap-datetimepicker-bower` are merged in a single one. The build process changed but the API is the same.
-However now the package exports DateTimeField directly, no need to do :
-```javascript
-var DateTimeField = require('react-bootstrap-datetimepicker').DateTimeField;
-```
-instead use :
-```javascript
-var DateTimeField = require('react-bootstrap-datetimepicker');
-```
 
 Contributions
 ===============================
