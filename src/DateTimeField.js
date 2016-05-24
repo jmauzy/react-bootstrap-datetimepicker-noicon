@@ -255,6 +255,10 @@ export default class DateTimeField extends Component {
     });
   }
 
+  onBlur = () => {
+    this.closePicker();
+  }
+
   onClick = () => {
     let classes, gBCR, offset, placePosition, scrollTop, styles;
     if (this.state.showPicker) {
@@ -373,8 +377,16 @@ export default class DateTimeField extends Component {
                   widgetClasses={this.state.widgetClasses}
                   widgetStyle={this.state.widgetStyle}
             />
-            <div className={"date " + this.size()} ref="datetimepicker">
-              <input className="form-control" onBlur={this.onBlur} onClick={this.onClick} onChange={this.onChange} type="text" value={this.state.inputValue} ref="dtpbutton" {...this.props.inputProps}/>
+            <div className={"date " + this.size()} ref="datetimepicker" style={{postion: 'relative'}}>
+              <input 
+                className="form-control" 
+                onBlur={this.onBlur} 
+                onClick={this.onClick}
+                onFocus={this.onClick} 
+                onChange={this.onChange} 
+                type="text" value={this.state.inputValue} 
+                ref="dtpbutton" {...this.props.inputProps}
+              />
             </div>
           </div>
     );
