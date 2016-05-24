@@ -56,7 +56,6 @@ export default class DateTimeField extends Component {
       showDatePicker: this.props.mode !== Constants.MODE_TIME,
       showTimePicker: this.props.mode === Constants.MODE_TIME,
       inputFormat: this.resolvePropsInputFormat(),
-      buttonIcon: this.props.mode === Constants.MODE_TIME ? "glyphicon-time" : "glyphicon-calendar",
       widgetStyle: {
         display: "block",
         position: "absolute",
@@ -282,7 +281,7 @@ export default class DateTimeField extends Component {
         classes.bottom = false;
         classes["pull-right"] = true;
       } else {
-        offset.top = 40;
+        offset.top = 55;
         classes.top = false;
         classes.bottom = true;
         classes["pull-right"] = true;
@@ -292,7 +291,7 @@ export default class DateTimeField extends Component {
         position: "absolute",
         top: offset.top,
         left: "auto",
-        right: 40
+        right: 40 
       };
       return this.setState({
         widgetStyle: styles,
@@ -374,11 +373,8 @@ export default class DateTimeField extends Component {
                   widgetClasses={this.state.widgetClasses}
                   widgetStyle={this.state.widgetStyle}
             />
-            <div className={"input-group date " + this.size()} ref="datetimepicker">
-              <input className="form-control" onChange={this.onChange} type="text" value={this.state.inputValue} {...this.props.inputProps}/>
-              <span className="input-group-addon" onBlur={this.onBlur} onClick={this.onClick} ref="dtpbutton">
-                <span className={classnames("glyphicon", this.state.buttonIcon)} />
-              </span>
+            <div className={"date " + this.size()} ref="datetimepicker">
+              <input className="form-control" onBlur={this.onBlur} onClick={this.onClick} onChange={this.onChange} type="text" value={this.state.inputValue} ref="dtpbutton" {...this.props.inputProps}/>
             </div>
           </div>
     );
