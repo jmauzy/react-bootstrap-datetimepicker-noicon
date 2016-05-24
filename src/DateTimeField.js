@@ -380,7 +380,6 @@ export default class DateTimeField extends Component {
             <div className={"date " + this.size()} ref="datetimepicker" style={{postion: 'relative'}}>
               <input 
                 className="form-control" 
-                onBlur={this.onBlur} 
                 onClick={this.onClick}
                 onFocus={this.onClick} 
                 onChange={this.onChange} 
